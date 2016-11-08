@@ -1,10 +1,10 @@
-[![Build Status](https://travis-ci.org/rwstauner/Dist-Zilla-PluginBundle-Author-RWSTAUNER.svg?branch=master)](https://travis-ci.org/rwstauner/Dist-Zilla-PluginBundle-Author-RWSTAUNER)
-[![Coverage Status](https://coveralls.io/repos/rwstauner/Dist-Zilla-PluginBundle-Author-RWSTAUNER/badge.svg?branch=master)](https://coveralls.io/r/rwstauner/Dist-Zilla-PluginBundle-Author-RWSTAUNER?branch=master)
-[![Kwalitee status](http://cpants.cpanauthors.org/dist/Dist-Zilla-PluginBundle-Author-RWSTAUNER.png)](http://cpants.charsbar.org/dist/overview/Dist-Zilla-PluginBundle-Author-RWSTAUNER)
+[![Build Status](https://travis-ci.org/mjgardner/Dist-Zilla-PluginBundle-Author-MJGARDNER.svg?branch=master)](https://travis-ci.org/MJGARDNER/Dist-Zilla-PluginBundle-Author-MJGARDNER)
+[![Coverage Status](https://coveralls.io/repos/mjgardner/Dist-Zilla-PluginBundle-Author-MJGARDNER/badge.svg?branch=master)](https://coveralls.io/r/mjgardner/Dist-Zilla-PluginBundle-Author-MJGARDNER?branch=master)
+[![Kwalitee status](http://cpants.cpanauthors.org/dist/Dist-Zilla-PluginBundle-Author-MJGARDNER.png)](http://cpants.charsbar.org/dist/overview/Dist-Zilla-PluginBundle-Author-MJGARDNER)
 
 # NAME
 
-Dist::Zilla::PluginBundle::Author::RWSTAUNER - RWSTAUNER's Dist::Zilla config
+Dist::Zilla::PluginBundle::Author::MJGARDNER - MJGARDNER's Dist::Zilla config
 
 # VERSION
 
@@ -14,7 +14,7 @@ version 6.001
 
     # dist.ini
 
-    [@Author::RWSTAUNER]
+    [@Author::MJGARDNER]
 
 # DESCRIPTION
 
@@ -26,7 +26,7 @@ that I use for building my distributions.
 
 Possible options and their default values:
 
-    authority      = cpan:RWSTAUNER
+    authority      = cpan:MJGARDNER
     auto_prereqs   = 1  ; enable AutoPrereqs
     copy_files     =    ; space-separated list of additional files to copy from build
     fake_release   = 0  ; if true will use FakeRelease instead of 'releaser'
@@ -36,7 +36,7 @@ Possible options and their default values:
     placeholder_comments = 0 ; use '# VERSION' and '# AUTHORITY' comments
     releaser       = UploadToCPAN
     skip_plugins   =    ; default empty; a regexp of plugin names to exclude
-    weaver_config  = @Author::RWSTAUNER
+    weaver_config  = @Author::MJGARDNER
 
 The `fake_release` option also respects `$ENV{DZIL_FAKERELEASE}`.
 
@@ -45,12 +45,12 @@ This bundle consumes [Dist::Zilla::Role::PluginBundle::Config::Slicer](https://m
 so you can also specify attributes for any of the bundled plugins.
 The option should be the plugin name and the attribute separated by a dot:
 
-    [@Author::RWSTAUNER]
+    [@Author::MJGARDNER]
     AutoPrereqs.skip = Bad::Module
 
 **Note** that this is different than
 
-    [@Author::RWSTAUNER]
+    [@Author::MJGARDNER]
     [AutoPrereqs]
     skip = Bad::Module
 
@@ -68,7 +68,7 @@ and then you can add it yourself:
     [MetaNoIndex]
     directory = one-dir
     directory = another-dir
-    [@Author::RWSTAUNER]
+    [@Author::MJGARDNER]
     -remove = MetaNoIndex
 
 `-remove` can be specified multiple times.
@@ -76,7 +76,7 @@ and then you can add it yourself:
 Alternatively you can use the `skip_plugins` attribute (only once)
 which is a regular expression that matches plugin name or package.
 
-    [@Author::RWSTAUNER]
+    [@Author::MJGARDNER]
     skip_plugins = MetaNoIndex|SomethingElse
 
 # ROUGHLY EQUIVALENT
@@ -116,7 +116,7 @@ This bundle is roughly equivalent to the following (generated) `dist.ini`:
 
     [Authority]
     :version       = 1.005
-    authority      = cpan:RWSTAUNER
+    authority      = cpan:MJGARDNER
     do_metadata    = 1
     do_munging     = 1
     locate_comment = 0
@@ -132,7 +132,7 @@ This bundle is roughly equivalent to the following (generated) `dist.ini`:
     skip     = ^x?t/.+
 
     [PodWeaver]
-    config_plugin = @Author::RWSTAUNER
+    config_plugin = @Author::MJGARDNER
 
     [License]
     [Readme]
@@ -239,7 +239,7 @@ This bundle is roughly equivalent to the following (generated) `dist.ini`:
 
 You can find documentation for this module with the perldoc command.
 
-    perldoc Dist::Zilla::PluginBundle::Author::RWSTAUNER
+    perldoc Dist::Zilla::PluginBundle::Author::MJGARDNER
 
 ## Websites
 
@@ -250,23 +250,23 @@ in addition to those websites please use your favorite search engine to discover
 
     A modern, open-source CPAN search engine, useful to view POD in HTML format.
 
-    [http://metacpan.org/release/Dist-Zilla-PluginBundle-Author-RWSTAUNER](http://metacpan.org/release/Dist-Zilla-PluginBundle-Author-RWSTAUNER)
+    [http://metacpan.org/release/Dist-Zilla-PluginBundle-Author-MJGARDNER](http://metacpan.org/release/Dist-Zilla-PluginBundle-Author-MJGARDNER)
 
 ## Bugs / Feature Requests
 
-Please report any bugs or feature requests by email to `bug-dist-zilla-pluginbundle-author-rwstauner at rt.cpan.org`, or through
-the web interface at [https://rt.cpan.org/Public/Bug/Report.html?Queue=Dist-Zilla-PluginBundle-Author-RWSTAUNER](https://rt.cpan.org/Public/Bug/Report.html?Queue=Dist-Zilla-PluginBundle-Author-RWSTAUNER). You will be automatically notified of any
+Please report any bugs or feature requests by email to `bug-dist-zilla-pluginbundle-author-mjgardner at rt.cpan.org`, or through
+the web interface at [https://rt.cpan.org/Public/Bug/Report.html?Queue=Dist-Zilla-PluginBundle-Author-MJGARDNER](https://rt.cpan.org/Public/Bug/Report.html?Queue=Dist-Zilla-PluginBundle-Author-MJGARDNER). You will be automatically notified of any
 progress on the request by the system.
 
 ## Source Code
 
-[https://github.com/rwstauner/Dist-Zilla-PluginBundle-Author-RWSTAUNER](https://github.com/rwstauner/Dist-Zilla-PluginBundle-Author-RWSTAUNER)
+[https://github.com/mjgardner/Dist-Zilla-PluginBundle-Author-MJGARDNER](https://github.com/mjgardner/Dist-Zilla-PluginBundle-Author-MJGARDNER)
 
-    git clone https://github.com/rwstauner/Dist-Zilla-PluginBundle-Author-RWSTAUNER.git
+    git clone https://github.com/mjgardner/Dist-Zilla-PluginBundle-Author-MJGARDNER.git
 
 # AUTHOR
 
-Randy Stauner &lt;rwstauner@cpan.org>
+Mark Gardner &lt;mjgardner@cpan.org>
 
 # CONTRIBUTORS
 
@@ -275,7 +275,7 @@ Randy Stauner &lt;rwstauner@cpan.org>
 
 # COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2010 by Randy Stauner.
+This software is copyright (c) 2016 by Mark Gardner.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.

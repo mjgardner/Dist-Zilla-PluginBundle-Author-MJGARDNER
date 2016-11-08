@@ -9,7 +9,7 @@ use Git::Wrapper;
 use File::Temp qw( tempfile );
 
 use Test::File::ShareDir -share => {
-  -module => { 'Dist::Zilla::MintingProfile::Author::RWSTAUNER' => 'share/profiles' },
+  -module => { 'Dist::Zilla::MintingProfile::Author::MJGARDNER' => 'share/profiles' },
 };
 
 (my $tmpfile, $ENV{GIT_CONFIG}) = tempfile( 'git-config.XXXXXX', TMPDIR => 1, UNLINK => 1, );
@@ -23,13 +23,13 @@ CONFIG
 close $tmpfile;
 
 {
-  my $user = 'rwstauner';
+  my $user = 'mjgardner';
   my $dist_name = 'DZT-Minty';
   (my $mod_name = $dist_name) =~ s/-/::/g;
   (my $mod_path = $dist_name . '.pm') =~ s!-!/!g;
 
   my $tzil = Minter->_new_from_profile(
-    [ 'Author::RWSTAUNER' => 'default' ],
+    [ 'Author::MJGARDNER' => 'default' ],
     { name    => $dist_name ,},
     { global_config_root => path(qw( corpus global ))->absolute },
   );
@@ -58,7 +58,7 @@ close $tmpfile;
 
   file_like( $tzil, 'dist.ini',
     qr/\Aname\s+=\s+$dist_name/, 'dist.ini name',
-    qr/\n\[\@Author::RWSTAUNER\]\n/, 'dist.ini uses author bundle',
+    qr/\n\[\@Author::MJGARDNER\]\n/, 'dist.ini uses author bundle',
   );
 
   file_like( $tzil, 'README.mkdn',

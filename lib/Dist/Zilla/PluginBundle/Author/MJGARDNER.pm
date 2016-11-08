@@ -2,9 +2,9 @@
 use strict;
 use warnings;
 
-package Dist::Zilla::PluginBundle::Author::RWSTAUNER;
+package Dist::Zilla::PluginBundle::Author::MJGARDNER;
 
-# ABSTRACT: RWSTAUNER's Dist::Zilla config
+# ABSTRACT: MJGARDNER's Dist::Zilla config
 
 use Moose;
 use List::Util qw(first); # core
@@ -532,7 +532,7 @@ log log_fatal
 
   # dist.ini
 
-  [@Author::RWSTAUNER]
+  [@Author::MJGARDNER]
 
 =head1 DESCRIPTION
 
@@ -544,7 +544,7 @@ that I use for building my distributions.
 
 Possible options and their default values:
 
-  authority      = cpan:RWSTAUNER
+  authority      = cpan:MJGARDNER
   auto_prereqs   = 1  ; enable AutoPrereqs
   copy_files     =    ; space-separated list of additional files to copy from build
   fake_release   = 0  ; if true will use FakeRelease instead of 'releaser'
@@ -554,7 +554,7 @@ Possible options and their default values:
   placeholder_comments = 0 ; use '# VERSION' and '# AUTHORITY' comments
   releaser       = UploadToCPAN
   skip_plugins   =    ; default empty; a regexp of plugin names to exclude
-  weaver_config  = @Author::RWSTAUNER
+  weaver_config  = @Author::MJGARDNER
 
 The C<fake_release> option also respects C<$ENV{DZIL_FAKERELEASE}>.
 
@@ -563,12 +563,12 @@ This bundle consumes L<Dist::Zilla::Role::PluginBundle::Config::Slicer>
 so you can also specify attributes for any of the bundled plugins.
 The option should be the plugin name and the attribute separated by a dot:
 
-  [@Author::RWSTAUNER]
+  [@Author::MJGARDNER]
   AutoPrereqs.skip = Bad::Module
 
 B<Note> that this is different than
 
-  [@Author::RWSTAUNER]
+  [@Author::MJGARDNER]
   [AutoPrereqs]
   skip = Bad::Module
 
@@ -586,7 +586,7 @@ and then you can add it yourself:
   [MetaNoIndex]
   directory = one-dir
   directory = another-dir
-  [@Author::RWSTAUNER]
+  [@Author::MJGARDNER]
   -remove = MetaNoIndex
 
 C<-remove> can be specified multiple times.
@@ -594,7 +594,7 @@ C<-remove> can be specified multiple times.
 Alternatively you can use the C<skip_plugins> attribute (only once)
 which is a regular expression that matches plugin name or package.
 
-  [@Author::RWSTAUNER]
+  [@Author::MJGARDNER]
   skip_plugins = MetaNoIndex|SomethingElse
 
 =head1 ROUGHLY EQUIVALENT

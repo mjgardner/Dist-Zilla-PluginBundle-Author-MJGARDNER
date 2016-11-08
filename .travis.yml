@@ -29,7 +29,7 @@ before_install:
     depdir="$(mktemp -d -t authordeps-XXXXXX)";
 
     INSPECTOR=Dist::Zilla::Config::BundleInspector
-    BUNDLE=Dist::Zilla::PluginBundle::Author::RWSTAUNER
+    BUNDLE=Dist::Zilla::PluginBundle::Author::MJGARDNER
 
     # Install author deps once to get bundle inspector, roles, etc.
     $helper_dir/bin/cpan-install `dzil authordeps | grep -v $BUNDLE`

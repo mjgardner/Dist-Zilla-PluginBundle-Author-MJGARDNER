@@ -2,8 +2,8 @@
 use strict;
 use warnings;
 
-package Dist::Zilla::PluginBundle::Author::RWSTAUNER::Minter;
-# ABSTRACT: RWSTAUNER's Dist::Zilla config for minting
+package Dist::Zilla::PluginBundle::Author::MJGARDNER::Minter;
+# ABSTRACT: MJGARDNER's Dist::Zilla config for minting
 
 use Moose;
 use MooseX::AttributeShortcuts;
@@ -123,7 +123,7 @@ generate_mailmap
 
   ; profile.ini
 
-  [@Author::RWSTAUNER::Minter]
+  [@Author::MJGARDNER::Minter]
 
 =head1 DESCRIPTION
 
@@ -138,7 +138,7 @@ This bundle is roughly equivalent to the following (generated) F<profile.ini>:
 =head1 SEE ALSO
 
 =for :list
-* L<Dist::Zilla::MintingProfile::Author::RWSTAUNER>
+* L<Dist::Zilla::MintingProfile::Author::MJGARDNER>
 * L<Dist::Zilla::Role::PluginBundle::Easy>
 
 =cut
@@ -168,7 +168,7 @@ license  = {{ $license }}
 copyright_holder = {{ join( ', ', map { (/^(.+) <.+>/)[0] }@{ $dist->authors } ) }}
 copyright_year   = {{ $copyright_year }}
 
-[@Author::RWSTAUNER]
+[@Author::MJGARDNER]
 __[ Changes ]__
 Revision history for {{$dist->name}}
 

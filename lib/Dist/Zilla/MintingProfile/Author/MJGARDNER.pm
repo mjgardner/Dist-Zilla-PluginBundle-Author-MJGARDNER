@@ -1,9 +1,9 @@
 use strict;
 use warnings;
 
-package Dist::Zilla::MintingProfile::Author::RWSTAUNER;
+package Dist::Zilla::MintingProfile::Author::MJGARDNER;
 
-# ABSTRACT: Mint a new dist for RWSTAUNER
+# ABSTRACT: Mint a new dist for MJGARDNER
 
 use Moose;
 with 'Dist::Zilla::Role::MintingProfile::ShareDir';
@@ -14,7 +14,7 @@ __PACKAGE__->meta->make_immutable;
 
 =head1 SYNOPSIS
 
-  dzil new -P Author::RWSTAUNER
+  dzil new -P Author::MJGARDNER
 
 =head1 DESCRIPTION
 

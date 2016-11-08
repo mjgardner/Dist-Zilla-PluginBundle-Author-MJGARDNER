@@ -6,7 +6,7 @@ use lib 't/lib';
 use Test::DZil;
 use Test::Fatal;
 
-my $NAME = 'Author::RWSTAUNER';
+my $NAME = 'Author::MJGARDNER';
 my $BNAME = "\@$NAME";
 my $mod = "Dist::Zilla::PluginBundle::$NAME";
 eval "require $mod" or die $@;

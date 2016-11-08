@@ -2,9 +2,9 @@
 use strict;
 use warnings;
 
-package Pod::Weaver::PluginBundle::Author::RWSTAUNER;
+package Pod::Weaver::PluginBundle::Author::MJGARDNER;
 
-# ABSTRACT: RWSTAUNER's Pod::Weaver config
+# ABSTRACT: MJGARDNER's Pod::Weaver config
 
 use Pod::Weaver::Config::Assembler;
 sub _exp { Pod::Weaver::Config::Assembler->expand_package($_[0]) }
@@ -122,13 +122,13 @@ sub mvp_bundle_config {
 
   ; weaver.ini
 
-  [@Author::RWSTAUNER]
+  [@Author::MJGARDNER]
 
 or with a F<dist.ini> like so:
 
   ; dist.ini
 
-  [@Author::RWSTAUNER]
+  [@Author::MJGARDNER]
 
 you don't need a F<weaver.ini> at all.
 
